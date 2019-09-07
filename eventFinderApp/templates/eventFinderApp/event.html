@@ -3,17 +3,22 @@
 {% block content %}
 
 <h2>{{ event.name }}</h2>
-<p> Event Categories</p>
+
+<b><p> Event Categories:</p></b>
     {% for cat in event.categories.all %}
         <p> {{ cat.name }}</p>
         {% endfor %}
-<p>Event Location</p>
+
+<b><p>Event Location:</p></b>
 <p>{{ event.location }}</p>
-<p>Event Venue</p>
+
+<b><p>Event Venue:</p></b>
 <p>{{ event.venue }}</p>
-<p>Event Start Time</p>
+
+<b><p>Event Start Time:</p></b>
 <p>Starts at: {{ event.start_time }}</p>
-<p>Event End Time</p>
+
+<p><b>Event End Time:</p></b>
 <p>Ends at: {{ event.end_time }}</p>
 
 {% endblock %}
